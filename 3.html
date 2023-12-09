@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Background Tabs</title>
+</head>
+<body>
+
+<button onclick="openBackgroundTabs()">Open Background Tabs</button>
+
+<script>
+function openBackgroundTabs() {
+  const urls = [
+    'https://play.google.com/store/apps/details?id=ppxkb.miwwexm.bhyqs.hshsm',
+    'https://play.google.com/store/apps/details?id=com.hdvideodownloader.videodownloadervidamte',
+    'https://play.google.com/store/apps/details?id=com.badunoglobal.mountain.climbcar.offroad.raccing'
+    // Add more URLs as needed
+  ];
+
+  // Open each URL in a new tab in the background
+  urls.forEach(url => {
+    const newTab = window.open();
+    newTab.location.href = url;
+  });
+}
+</script>
+
+</body>
+</html>
