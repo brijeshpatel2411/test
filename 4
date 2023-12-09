@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Call Button</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+
+    .video-call-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .video-call-button:hover {
+      transform: scale(1.1);
+    }
+
+    .button-image {
+      width: 100px; /* Adjust the width as needed */
+      height: 100px; /* Adjust the height as needed */
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+
+    .button-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .button-text {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div class="video-call-button" onclick="startVideoCall()">
+  <div class="button-image">
+    <img src="video-icon.png" alt="Video Call Icon">
+  </div>
+  <div class="button-text">Start Video Call</div>
+</div>
+
+<script>
+  function startVideoCall() {
+    // Add your video call functionality here
+    alert('Video call started!');
+  }
+</script>
+
+</body>
+</html>
