@@ -7,21 +7,22 @@
 </head>
 <body>
 
-<button onclick="openBackgroundTabs()">Open Background Tabs</button>
+<button onclick="openMultipleTabs()">Open Multiple Tabs</button>
 
 <script>
-function openBackgroundTabs() {
+function openMultipleTabs() {
+  // Array of URLs
   const urls = [
-    'https://play.google.com/store/apps/details?id=ppxkb.miwwexm.bhyqs.hshsm',
-    'https://play.google.com/store/apps/details?id=com.hdvideodownloader.videodownloadervidamte',
-    'https://play.google.com/store/apps/details?id=com.badunoglobal.mountain.climbcar.offroad.raccing'
+    'https://www.example1.com',
+    'https://www.example2.com',
+    'https://www.example3.com'
     // Add more URLs as needed
   ];
 
-  // Open each URL in a new tab in the background
+  // Open each URL in a new tab
   urls.forEach(url => {
-    const newTab = window.open();
-    newTab.location.href = url;
+    const newTab = window.open(url, '_blank');
+    newTab.blur();  // Move focus away from the new tab
   });
 }
 </script>
