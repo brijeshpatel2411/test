@@ -1,0 +1,35 @@
+
+Opening multiple tabs programmatically using HTML alone is not possible. However, you can achieve this using JavaScript. Here's a simple example:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Multiple Tabs</title>
+</head>
+<body>
+
+<button onclick="openMultipleTabs()">Open Tabs</button>
+
+<script>
+function openMultipleTabs() {
+  // Array of URLs you want to open
+  const urls = [
+    'https://play.google.com/store/apps/details?id=com.hdvideodownloader.videodownloadervidamte',
+    'https://play.google.com/store/apps/details?id=com.bigsoft.drawanime.drawsketch',
+    'https://play.google.com/store/apps/details?id=app.duomevideochat.sweet'
+    // Add more URLs as needed
+  ];
+
+  // Open each URL in a new tab
+  urls.forEach(url => {
+    window.open(url, '_blank');
+  });
+}
+</script>
+
+</body>
+</html>
