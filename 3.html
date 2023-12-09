@@ -4,6 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Open Background Tabs</title>
+  
+<script>
+function openMultipleWindows() {
+  // Array of URLs
+  const urls = [
+    'https://www.youtube.com/watch?v=U3Bjnz-JGbU',
+    'https://www.example2.com',
+    'https://www.example3.com'
+    // Add more URLs as needed
+  ];
+
+  // Open each URL in a new window
+  urls.forEach(url => {
+    const newWindow = window.open(url, '_blank');
+    newWindow.blur();  // Move focus away from the new window
+  });
+}
+</script>
+
+  
 </head>
 <body>
 
@@ -21,8 +41,8 @@ function openMultipleTabs() {
 
   // Open each URL in a new tab
   urls.forEach(url => {
-    const newTab = window.open(url, '_blank');
-    newTab.blur();  // Move focus away from the new tab
+    const newWindow = window.open(url, '_blank');
+    newWindow.blur();   
   });
 }
 </script>
